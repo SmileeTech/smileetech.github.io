@@ -15,7 +15,8 @@
     <meta property="og:description" content="We design and build polished iOS and Android apps, from first screen to launch.">
     <meta property="og:image" content="./img/logo.png">
 
-    <link rel="icon" href="./img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="./img/logo_svg.svg">
+    <link rel="alternate icon" href="./img/logo.png">
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -29,9 +30,10 @@
 
     <header class="site-nav">
         <div class="container nav-inner">
-            <a class="brand" href="#top">Smilee</a>
+            <a class="brand" href="#top"><img class="brand-logo" src="./img/logo_svg.svg" alt="" width="28" height="28">Smilee</a>
             <nav class="nav-links" aria-label="Primary">
                 <a href="#services">Services</a>
+                <a href="#apps">Apps</a>
                 <a href="#process">Process</a>
                 <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
             </nav>
@@ -52,11 +54,15 @@
                         <a class="btn btn-primary" href="#contact">Start a project</a>
                         <a class="btn btn-ghost" href="#services">See services</a>
                     </div>
+                    <a class="hero-trust" href="https://play.google.com/store/apps/dev?id=8475170613127780410" target="_blank" rel="noopener">
+                        <span class="hero-trust-label">Available on</span>
+                        <img src="https://cdn.simpleicons.org/googleplay/ffffff" alt="Google Play" width="16" height="16">
+                        <span>Google Play</span>
+                    </a>
                 </div>
                 <div class="hero-visual">
                     <div class="app-frame">
-                        <!-- TODO: replace with a real product screenshot (9:19, 480x960) -->
-                        <img src="https://picsum.photos/seed/smilee-app-dark/480/960" alt="A mobile app built by Smilee Technology" width="480" height="960" loading="eager">
+                        <img src="./img/apps/snapvpn-shot.png" alt="A mobile app built by Smilee Technology" width="480" height="960" loading="eager">
                     </div>
                 </div>
             </div>
@@ -140,6 +146,111 @@
             </div>
         </section>
 
+        <!-- Apps on Google Play -->
+        <section id="apps" class="section apps" data-reveal>
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Shipped to <span class="grad">Google Play.</span></h2>
+                    <p class="section-sub">Real apps, live on the store, across categories from games to utilities.</p>
+                </div>
+
+                <!-- Developer identity card -->
+                <a class="dev-card" href="https://play.google.com/store/apps/dev?id=8475170613127780410" target="_blank" rel="noopener">
+                    <img class="brand-logo" src="./img/logo_svg.svg" alt="" width="44" height="44">
+                    <div class="dev-card-meta">
+                        <span class="dev-card-name">Smilee Technology</span>
+                        <span class="dev-card-desc">"Nice app developer" — verified on Google Play</span>
+                    </div>
+                    <span class="dev-card-count">10 apps</span>
+                    <img class="dev-card-store" src="https://cdn.simpleicons.org/googleplay/ffffff" alt="Google Play" width="20" height="20">
+                </a>
+
+                <!-- Featured apps with screenshots -->
+                <div class="app-features">
+                    <article class="app-feature">
+                        <div class="app-feature-shot">
+                            <img src="./img/apps/arcade-fishing-shot.png" alt="Arcade Fishing screenshot" loading="lazy">
+                        </div>
+                        <div class="app-feature-info">
+                            <img class="app-icon" src="./img/apps/arcade-fishing.png" alt="" width="44" height="44">
+                            <div class="app-feature-meta">
+                                <h3 class="app-name">Arcade Fishing</h3>
+                                <span class="app-tag">Game</span>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://play.google.com/store/apps/details?id=com.smilee.arcadefishing" target="_blank" rel="noopener">Play</a>
+                        </div>
+                    </article>
+                    <article class="app-feature">
+                        <div class="app-feature-shot">
+                            <img src="./img/apps/videohub-shot.png" alt="VideoHub screenshot" loading="lazy">
+                        </div>
+                        <div class="app-feature-info">
+                            <img class="app-icon" src="./img/apps/videohub.png" alt="" width="44" height="44">
+                            <div class="app-feature-meta">
+                                <h3 class="app-name">VideoHub</h3>
+                                <span class="app-tag">Video</span>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://play.google.com/store/apps/details?id=com.smilee.videohub" target="_blank" rel="noopener">Play</a>
+                        </div>
+                    </article>
+                    <article class="app-feature">
+                        <div class="app-feature-shot">
+                            <img src="./img/apps/snapvpn-shot.png" alt="SnapVPN screenshot" loading="lazy">
+                        </div>
+                        <div class="app-feature-info">
+                            <img class="app-icon" src="./img/apps/snapvpn.png" alt="" width="44" height="44">
+                            <div class="app-feature-meta">
+                                <h3 class="app-name">SnapVPN</h3>
+                                <span class="app-tag">VPN</span>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://play.google.com/store/apps/details?id=com.smilee.snapvpn" target="_blank" rel="noopener">Play</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Full app grid (the other 7) -->
+                <div class="app-grid">
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.cleansweep" target="_blank" rel="noopener">
+                        <img src="./img/apps/clean-sweep.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Clean Sweep</span>
+                        <span class="app-tile-cat">Cleaner</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.quickclean" target="_blank" rel="noopener">
+                        <img src="./img/apps/quick-clean.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Quick Clean</span>
+                        <span class="app-tile-cat">Cleaner</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.survivorsquad" target="_blank" rel="noopener">
+                        <img src="./img/apps/survivor-squad.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Survivor Squad</span>
+                        <span class="app-tile-cat">Game</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.nutsandbolts.screwpinpuzzle" target="_blank" rel="noopener">
+                        <img src="./img/apps/screw-challenge.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Screw Challenge</span>
+                        <span class="app-tile-cat">Puzzle</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.translater" target="_blank" rel="noopener">
+                        <img src="./img/apps/easy-translate.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Easy Translate</span>
+                        <span class="app-tile-cat">Translate</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.fasterproxy" target="_blank" rel="noopener">
+                        <img src="./img/apps/faster-proxy.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Faster Proxy</span>
+                        <span class="app-tile-cat">VPN</span>
+                    </a>
+                    <a class="app-tile" href="https://play.google.com/store/apps/details?id=com.smilee.sleepsound.dreamify" target="_blank" rel="noopener">
+                        <img src="./img/apps/silent-night.png" alt="" width="56" height="56" loading="lazy">
+                        <span class="app-tile-name">Silent Night</span>
+                        <span class="app-tile-cat">Sleep</span>
+                    </a>
+                </div>
+
+                <p class="apps-cta">See all 10 apps on <a href="https://play.google.com/store/apps/dev?id=8475170613127780410" target="_blank" rel="noopener">Google Play</a>.</p>
+            </div>
+        </section>
+
         <!-- CTA -->
         <section id="contact" class="section cta" data-reveal>
             <div class="cta-glow" aria-hidden="true"></div>
@@ -161,7 +272,7 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <span class="footer-brand">Smilee Technology</span>
+            <span class="footer-brand"><img class="brand-logo" src="./img/logo_svg.svg" alt="" width="22" height="22">Smilee Technology</span>
             <nav class="footer-links" aria-label="Social">
                 <a href="mailto:hello@smileetechnology.com">Email</a>
                 <a href="https://github.com/SmileeTech" target="_blank" rel="noopener">GitHub</a>
