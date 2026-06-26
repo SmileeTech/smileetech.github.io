@@ -64,16 +64,16 @@
                         <div class="hero-phone">
                             <img class="hero-phone-bg" src="https://picsum.photos/seed/smilee-app-dark/480/960" alt="" loading="eager">
                             <div class="hero-icons" aria-label="Apps by Smilee Technology">
-                                <div class="hero-icon"><img src="./img/apps/videohub.png" alt=""><span>VideoHub</span></div>
-                                <div class="hero-icon"><img src="./img/apps/snapvpn.png" alt=""><span>SnapVPN</span></div>
-                                <div class="hero-icon"><img src="./img/apps/arcade-fishing.png" alt=""><span>Arcade Fishing</span></div>
-                                <div class="hero-icon"><img src="./img/apps/clean-sweep.png" alt=""><span>Clean Sweep</span></div>
-                                <div class="hero-icon"><img src="./img/apps/quick-clean.png" alt=""><span>Quick Clean</span></div>
-                                <div class="hero-icon"><img src="./img/apps/survivor-squad.png" alt=""><span>Survivor Squad</span></div>
-                                <div class="hero-icon"><img src="./img/apps/screw-challenge.png" alt=""><span>Screw Challenge</span></div>
-                                <div class="hero-icon"><img src="./img/apps/easy-translate.png" alt=""><span>Easy Translate</span></div>
-                                <div class="hero-icon"><img src="./img/apps/faster-proxy.png" alt=""><span>Faster Proxy</span></div>
-                                <div class="hero-icon"><img src="./img/apps/silent-night.png" alt=""><span>Silent Night</span></div>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/videohub.png" alt=""><span>VideoHub</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/snapvpn.png" alt=""><span>SnapVPN</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/arcade-fishing.png" alt=""><span>Arcade Fishing</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/clean-sweep.png" alt=""><span>Clean Sweep</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/quick-clean.png" alt=""><span>Quick Clean</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/survivor-squad.png" alt=""><span>Survivor Squad</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/screw-challenge.png" alt=""><span>Screw Challenge</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/easy-translate.png" alt=""><span>Easy Translate</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/faster-proxy.png" alt=""><span>Faster Proxy</span></a>
+                                <a class="hero-icon" href="#apps"><img src="./img/apps/silent-night.png" alt=""><span>Silent Night</span></a>
                             </div>
                         </div>
                     </div>
@@ -342,6 +342,20 @@
                 });
             }, { threshold: 0.15 });
             els.forEach(function (el) { io.observe(el); });
+        })();
+        // Hero app icons scroll to the matching app card in the showcase
+        (function () {
+            var icons = document.querySelectorAll('.hero-icon');
+            var cards = document.querySelectorAll('.app-card');
+            Array.prototype.forEach.call(icons, function (el, i) {
+                el.addEventListener('click', function (e) {
+                    var card = cards[i];
+                    if (card) {
+                        e.preventDefault();
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            });
         })();
     </script>
 
