@@ -189,12 +189,23 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-.app-frame img {
+.hero-icons {
     width: 100%;
     max-width: 300px;
     aspect-ratio: 9 / 19;
-    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(160deg, #15151c, #0d0d12);
     border-radius: 26px;
+}
+.hero-icons img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 /* ---------- Hero entrance (on load) ---------- */
@@ -326,7 +337,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .app-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--s-3);
+    gap: var(--s-5);
 }
 .app-card {
     display: flex;
