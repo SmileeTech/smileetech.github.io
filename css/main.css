@@ -325,9 +325,8 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--s-3);
-    grid-auto-flow: dense;
 }
 .app-card {
     display: flex;
@@ -336,16 +335,14 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
     background: var(--card);
     border: 1px solid var(--border);
     overflow: hidden;
-    align-self: start;
     transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .app-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
-.app-card--wide { grid-column: span 2; }
 .app-card-shot { overflow: hidden; background: var(--bg-elev); }
 .app-card-shot img { width: 100%; height: auto; display: block; }
-.app-card-info { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); padding: var(--s-3); }
-.app-card-meta { flex: 1; min-width: 120px; }
-.app-card-actions { display: flex; gap: var(--s-1); width: 100%; }
+.app-card-info { display: flex; align-items: center; gap: var(--s-2); padding: var(--s-3); }
+.app-card-meta { flex: 1; min-width: 0; }
+.app-card-actions { display: flex; gap: var(--s-1); flex-shrink: 0; }
 .app-icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
 .app-name { font-size: 1rem; }
 .app-tag { display: block; color: var(--text-3); font-size: 0.8rem; }
@@ -400,7 +397,6 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
     .bento--design, .bento--feature, .bento--build, .bento--launch { grid-column: span 1; }
     .process-list { grid-template-columns: repeat(2, 1fr); gap: var(--s-4); }
     .process-list::before { display: none; }
-    .app-grid { grid-template-columns: repeat(3, 1fr); }
     .section { padding: var(--s-6) 0; }
 }
 
@@ -411,8 +407,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
     .hero-actions .btn { width: 100%; }
     .bento { grid-template-columns: 1fr; }
     .process-list { grid-template-columns: 1fr; }
-    .app-grid { grid-template-columns: repeat(2, 1fr); }
-    .app-card--wide { grid-column: span 2; }
+    .app-grid { grid-template-columns: 1fr; }
     .dev-card { flex-wrap: wrap; }
     .footer-inner { flex-direction: column; align-items: flex-start; gap: var(--s-2); }
 }
